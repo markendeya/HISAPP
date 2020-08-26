@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.his.admin.Model.CaseWorker;
-import com.his.admin.service.ICaseWorkerService;
+import com.his.admin.service.CaseWorkerServiceImpl;
 
 @RestController
 public class CaseWorkerController {
 	
 	@Autowired
-	private ICaseWorkerService caseWorkerService;
+	private CaseWorkerServiceImpl caseWorkerService;
 	
 	@RequestMapping("/saveAccount")
 	public String saveCaseWorker(@RequestBody CaseWorker caseWorker) {

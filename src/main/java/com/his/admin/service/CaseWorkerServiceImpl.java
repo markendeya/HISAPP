@@ -6,11 +6,13 @@ import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.his.admin.Entity.CaseWorkerEntity;
 import com.his.admin.Model.CaseWorker;
 import com.his.admin.repository.CaseWorkerRepo;
 
+@Service
 public class CaseWorkerServiceImpl implements ICaseWorkerService{
 	
 	@Autowired

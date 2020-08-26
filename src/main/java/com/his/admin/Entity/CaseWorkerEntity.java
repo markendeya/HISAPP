@@ -12,12 +12,6 @@ public class CaseWorkerEntity {
 	@Id
 	@Column(name="caseworker_Id")
 	private Integer caseWorkerId;
-	public Integer getCaseWorkerId() {
-		return caseWorkerId;
-	}
-	public void setCaseWorkerId(Integer caseWorkerId) {
-		this.caseWorkerId = caseWorkerId;
-	}
 	@Column(name="first_name")
 	private String firstName;
 	@Column(name="last_name")
@@ -28,6 +22,13 @@ public class CaseWorkerEntity {
 	private String gender;
 	@Column(name="role")
 	private String role;
+	
+	public Integer getCaseWorkerId() {
+		return caseWorkerId;
+	}
+	public void setCaseWorkerId(Integer caseWorkerId) {
+		this.caseWorkerId = caseWorkerId;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
