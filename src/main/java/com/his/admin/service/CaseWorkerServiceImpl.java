@@ -46,7 +46,7 @@ public class CaseWorkerServiceImpl implements ICaseWorkerService{
 		CaseWorkerEntity caseWorkerEntity=new CaseWorkerEntity();
 		BeanUtils.copyProperties(CaseWorker, caseWorkerEntity);
 		CaseWorkerEntity caseWorkerDetails = caseWorkerRepo.save(caseWorkerEntity);
-		return caseWorkerDetails.getCaseWorkerId();
+		return caseWorkerDetails.getAccountId();
 	}
 
 

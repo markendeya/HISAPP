@@ -1,20 +1,27 @@
 package com.his.admin.Entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name="caseworker")
+@Table(name="Account_Table")
 public class CaseWorkerEntity {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="caseworker_Id")
-	private Integer caseWorkerId;
+	@Column(name="account_id")
+	private Integer accountId;
 	@Column(name="first_name")
 	private String firstName;
 	@Column(name="last_name")
@@ -26,12 +33,16 @@ public class CaseWorkerEntity {
 	@Column(name="role")
 	private String role;
 	
-	public Integer getCaseWorkerId() {
-		return caseWorkerId;
-	}
-	public void setCaseWorkerId(Integer caseWorkerId) {
-		this.caseWorkerId = caseWorkerId;
-	}
+	@CreationTimestamp
+	@Temporal(TemporalType.DATE)
+	@Column(name="created_date")
+	private Date createdDate;
+	
+	@UpdateTimestamp
+	@Temporal(TemporalType.DATE)
+	@Column(name="update_date")
+	private Date updateDate;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -62,4 +73,23 @@ public class CaseWorkerEntity {
 	public void setRole(String role) {
 		this.role = role;
 	}
+	public Integer getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
+	}
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
 }

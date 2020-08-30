@@ -1,13 +1,29 @@
 package com.his.admin.Model;
 
+import java.util.Date;
+
 public class CaseWorker {
 
-	private Integer caseWorkerId;
+	private Integer accountId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String gender;
 	private String role;
+	private Date createdDate;
+	private Date createdBy;
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Date getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(Date createdBy) {
+		this.createdBy = createdBy;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -39,11 +55,11 @@ public class CaseWorker {
 		this.role = role;
 	}
 	
-	public Integer getCaseWorkerId() {
-		return caseWorkerId;
+	public Integer getAccountId() {
+		return accountId;
 	}
-	public void setCaseWorkerId(Integer caseWorkerId) {
-		this.caseWorkerId = caseWorkerId;
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
 	}
 	
 }
